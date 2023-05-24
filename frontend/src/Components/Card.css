@@ -1,0 +1,30 @@
+.card {
+    width: 25%;
+    height: 30%;
+
+    border-radius: 5px;
+    background-color: #29637a;
+    
+    color: white;
+    text-decoration: none;
+    
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.card > h1 {
+    font-weight: 100;
+    font-size: 45px;
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.card > p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}

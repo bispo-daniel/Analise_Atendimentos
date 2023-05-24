@@ -1,0 +1,30 @@
+.dashboardMain {
+    width: 95%;
+    max-width: 500px;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border-radius: 5px;
+    background-color: #087099;
+}
+
+.dashboardMain > h1 {
+    font-weight: 100;
+    font-size: 35px;
+    color: white;
+
+    margin-block-end: 0;
+}
+
+.dashboardMain > .cardWrapper {
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

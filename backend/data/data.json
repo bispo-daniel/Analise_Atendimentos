@@ -1,0 +1,279 @@
+{
+    "tickets": [
+        {
+            "id": 801,
+            "status": "open",
+            "unreadMessages": 0,
+            "lastMessage": "*admin:*\nola",
+            "isGroup": false,
+            "statusChatEnd": "SEM RETORNO DO CLIENTE",
+            "userId": 2,
+            "contactId": 630,
+            "whatsappId": 33,
+            "queueId": 17,
+            "createdAt": "2022-05-19T21:21:02.000Z",
+            "updatedAt": "2022-05-19T21:21:17.000Z",
+            "contact": {
+                "id": 630,
+                "name": "Monitoramento Omnihit",
+                "number": "5511954000000",
+                "profilePicUrl": "https://pps.whatsapp.net/v/t61.24694-24/247885386_916962265894640_6506806679304768375_n.jpg?ccb=11-4&oh=01_AVw7hbusZ5HW7ydnqlnf52uy0KEQ8QwLyg7VZtDPutm6Lw&oe=6295E2D3"
+            },
+            "queue": {
+                "id": 17,
+                "name": "geral",
+                "color": "#cccccc"
+            }
+        },
+        {
+            "id": 800,
+            "status": "closed",
+            "unreadMessages": 0,
+            "lastMessage": " Seu atendimento foi encerrado. Agradecemos o contato!",
+            "isGroup": false,
+            "statusChatEnd": "SEM RETORNO DO CLIENTE",
+            "userId": 2,
+            "contactId": 630,
+            "whatsappId": 33,
+            "queueId": 17,
+            "createdAt": "2022-05-19T21:19:58.000Z",
+            "updatedAt": "2022-05-19T21:20:56.000Z",
+            "contact": {
+                "id": 630,
+                "name": "Monitoramento Omnihit",
+                "number": "5511954000000",
+                "profilePicUrl": "https://pps.whatsapp.net/v/t61.24694-24/247885386_916962265894640_6506806679304768375_n.jpg?ccb=11-4&oh=01_AVw7hbusZ5HW7ydnqlnf52uy0KEQ8QwLyg7VZtDPutm6Lw&oe=6295E2D3"
+            },
+            "queue": {
+                "id": 17,
+                "name": "geral",
+                "color": "#cccccc"
+            }
+        },
+        {
+            "id": 799,
+            "status": "closed",
+            "unreadMessages": 0,
+            "lastMessage": "Ok",
+            "isGroup": false,
+            "statusChatEnd": "SEM RETORNO DO CLIENTE",
+            "userId": 2,
+            "contactId": 627,
+            "whatsappId": 33,
+            "queueId": 17,
+            "createdAt": "2022-05-19T21:08:00.000Z",
+            "updatedAt": "2022-05-19T21:19:43.000Z",
+            "contact": {
+                "id": 627,
+                "name": "maria",
+                "number": "5511988999999",
+                "profilePicUrl": "https://pps.whatsapp.net/v/t61.24694-24/205926221_142668831614151_737s6669479074177420_n.jpg?ccb=11-4&oh=01_AVxiil0O9onNDjH6QKBX8GFLF3_8imOIBQt4l4F6nJOrQA&oe=6297287F"
+            },
+            "queue": {
+                "id": 17,
+                "name": "geral",
+                "color": "#cccccc"
+            }
+        },
+        {
+            "id": 798,
+            "status": "closed",
+            "unreadMessages": 0,
+            "lastMessage": " Seu atendimento foi encerrado. Agradecemos o contato!",
+            "isGroup": false,
+            "statusChatEnd": "SEM RETORNO DO CLIENTE",
+            "userId": 2,
+            "contactId": 627,
+            "whatsappId": 33,
+            "queueId": 17,
+            "createdAt": "2022-05-19T21:07:24.000Z",
+            "updatedAt": "2022-05-19T21:07:53.000Z",
+            "contact": {
+                "id": 627,
+                "name": "maria",
+                "number": "5511988999999",
+                "profilePicUrl": "https://pps.whatsapp.net/v/t61.24694-24/205926221_142668831614151_737s6669479074177420_n.jpg?ccb=11-4&oh=01_AVxiil0O9onNDjH6QKBX8GFLF3_8imOIBQt4l4F6nJOrQA&oe=6297287F"
+            },
+            "queue": {
+                "id": 17,
+                "name": "geral",
+                "color": "#cccccc"
+            }
+        },
+        {
+            "id": 797,
+            "status": "closed",
+            "unreadMessages": 0,
+            "lastMessage": "*admin:*\\Ola",
+            "isGroup": false,
+            "statusChatEnd": "SEM RETORNO DO CLIENTE",
+            "userId": 2,
+            "contactId": 627,
+            "whatsappId": 33,
+            "queueId": 17,
+            "createdAt": "2022-05-19T21:06:55.000Z",
+            "updatedAt": "2022-05-19T21:07:14.000Z",
+            "contact": {
+                "id": 627,
+                "name": "maria",
+                "number": "5511988999999",
+                "profilePicUrl": "https://pps.whatsapp.net/v/t61.24694-24/205926221_142668831614151_737s6669479074177420_n.jpg?ccb=11-4&oh=01_AVxiil0O9onNDjH6QKBX8GFLF3_8imOIBQt4l4F6nJOrQA&oe=6297287F"
+            },
+            "queue": {
+                "id": 17,
+                "name": "geral",
+                "color": "#cccccc"
+            }
+        },
+        {
+            "id": 796,
+            "status": "pending",
+            "unreadMessages": 0,
+            "lastMessage": " Seu atendimento foi encerrado. Agradecemos o contato!",
+            "isGroup": false,
+            "statusChatEnd": "SEM RETORNO DO CLIENTE",
+            "userId": 2,
+            "contactId": 627,
+            "whatsappId": 33,
+            "queueId": 17,
+            "createdAt": "2022-05-19T20:59:37.000Z",
+            "updatedAt": "2022-05-19T21:05:42.000Z",
+            "contact": {
+                "id": 627,
+                "name": "maria",
+                "number": "5511988999999",
+                "profilePicUrl": "https://pps.whatsapp.net/v/t61.24694-24/205926221_142668831614151_737s6669479074177420_n.jpg?ccb=11-4&oh=01_AVxiil0O9onNDjH6QKBX8GFLF3_8imOIBQt4l4F6nJOrQA&oe=6297287F"
+            },
+            "queue": {
+                "id": 17,
+                "name": "geral",
+                "color": "#cccccc"
+            }
+        },
+        {
+            "id": 795,
+            "status": "closed",
+            "unreadMessages": 0,
+            "lastMessage": " Seu atendimento foi encerrado. Agradecemos o contato!",
+            "isGroup": false,
+            "statusChatEnd": "SEM RETORNO DO CLIENTE",
+            "userId": 2,
+            "contactId": 627,
+            "whatsappId": 33,
+            "queueId": 17,
+            "createdAt": "2022-05-19T20:50:00.000Z",
+            "updatedAt": "2022-05-19T20:59:27.000Z",
+            "contact": {
+                "id": 627,
+                "name": "maria",
+                "number": "5511988999999",
+                "profilePicUrl": "https://pps.whatsapp.net/v/t61.24694-24/205926221_142668831614151_737s6669479074177420_n.jpg?ccb=11-4&oh=01_AVxiil0O9onNDjH6QKBX8GFLF3_8imOIBQt4l4F6nJOrQA&oe=6297287F"
+            },
+            "queue": {
+                "id": 17,
+                "name": "geral",
+                "color": "#cccccc"
+            }
+        },
+        {
+            "id": 794,
+            "status": "closed",
+            "unreadMessages": 0,
+            "lastMessage": " Seu atendimento foi encerrado. Agradecemos o contato!",
+            "isGroup": false,
+            "statusChatEnd": "SEM RETORNO DO CLIENTE",
+            "userId": 2,
+            "contactId": 630,
+            "whatsappId": 33,
+            "queueId": 17,
+            "createdAt": "2022-05-19T20:32:56.000Z",
+            "updatedAt": "2022-05-19T20:34:37.000Z",
+            "contact": {
+                "id": 630,
+                "name": "Monitoramento Omnihit",
+                "number": "5511954000000",
+                "profilePicUrl": "https://pps.whatsapp.net/v/t61.24694-24/247885386_916962265894640_6506806679304768375_n.jpg?ccb=11-4&oh=01_AVw7hbusZ5HW7ydnqlnf52uy0KEQ8QwLyg7VZtDPutm6Lw&oe=6295E2D3"
+            },
+            "queue": {
+                "id": 17,
+                "name": "geral",
+                "color": "#cccccc"
+            }
+        },
+        {
+            "id": 793,
+            "status": "closed",
+            "unreadMessages": 0,
+            "lastMessage": " Seu atendimento foi encerrado. Agradecemos o contato!",
+            "isGroup": false,
+            "statusChatEnd": "SEM RETORNO DO CLIENTE",
+            "userId": 2,
+            "contactId": 627,
+            "whatsappId": 33,
+            "queueId": 17,
+            "createdAt": "2022-05-19T18:37:22.000Z",
+            "updatedAt": "2022-05-19T20:32:03.000Z",
+            "contact": {
+                "id": 627,
+                "name": "maria",
+                "number": "5511988999999",
+                "profilePicUrl": "https://pps.whatsapp.net/v/t61.24694-24/205926221_142668831614151_737s6669479074177420_n.jpg?ccb=11-4&oh=01_AVxiil0O9onNDjH6QKBX8GFLF3_8imOIBQt4l4F6nJOrQA&oe=6297287F"
+            },
+            "queue": {
+                "id": 17,
+                "name": "geral",
+                "color": "#cccccc"
+            }
+        },
+        {
+            "id": 792,
+            "status": "closed",
+            "unreadMessages": 0,
+            "lastMessage": " Seu atendimento foi encerrado. Agradecemos o contato!",
+            "isGroup": false,
+            "statusChatEnd": "SEM RETORNO DO CLIENTE",
+            "userId": 2,
+            "contactId": 627,
+            "whatsappId": 33,
+            "queueId": 17,
+            "createdAt": "2022-05-19T18:23:44.000Z",
+            "updatedAt": "2022-05-19T18:24:08.000Z",
+            "contact": {
+                "id": 627,
+                "name": "maria",
+                "number": "5511988999999",
+                "profilePicUrl": "https://pps.whatsapp.net/v/t61.24694-24/205926221_142668831614151_737s6669479074177420_n.jpg?ccb=11-4&oh=01_AVxiil0O9onNDjH6QKBX8GFLF3_8imOIBQt4l4F6nJOrQA&oe=6297287F"
+            },
+            "queue": {
+                "id": 17,
+                "name": "geral",
+                "color": "#cccccc"
+            }
+        },
+        {
+            "id": 791,
+            "status": "closed",
+            "unreadMessages": 0,
+            "lastMessage": " Seu atendimento foi encerrado. Agradecemos o contato!",
+            "isGroup": false,
+            "statusChatEnd": "",
+            "userId": 2,
+            "contactId": 627,
+            "whatsappId": 33,
+            "queueId": 17,
+            "createdAt": "2022-05-19T18:20:29.000Z",
+            "updatedAt": "2022-05-19T18:20:46.000Z",
+            "contact": {
+                "id": 627,
+                "name": "maria",
+                "number": "5511988999999",
+                "profilePicUrl": "https://pps.whatsapp.net/v/t61.24694-24/205926221_142668831614151_737s6669479074177420_n.jpg?ccb=11-4&oh=01_AVxiil0O9onNDjH6QKBX8GFLF3_8imOIBQt4l4F6nJOrQA&oe=6297287F"
+            },
+            "queue": {
+                "id": 17,
+                "name": "geral",
+                "color": "#cccccc"
+            }
+        }
+    ]
+}
