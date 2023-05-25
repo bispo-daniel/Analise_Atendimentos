@@ -1,0 +1,50 @@
+.signInMain {
+    width: 95%;
+    max-width: 400px;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: #087099;
+    border-radius: 5px;
+}
+
+.signInMain > h1 {
+    font-weight: 100;
+    font-size: 35px;
+    color: white;
+}
+
+.signInMain > input {
+    width: 75%;
+    height: 35px;
+
+    border: none;
+    border-radius: 5px;
+
+    padding-left: 10px;
+}
+
+.signInMain > input:focus {
+    outline: 1px solid #888;
+}
+
+.signInMain > button {
+    width: 50%;
+    height: 35px;
+
+    border: none;
+    border-radius: 5px;
+}
+
+.signInMain > button:hover {
+    background-color: #888;
+    transition: 0.5s;
+}
+
+.signInMain > p {
+    color: white;
+}

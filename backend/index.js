@@ -1,25 +1,37 @@
 const express = require("express");
-const port = 3001;
-
-const dataJSON = require("./data/data.json");
-const userJSON = require("./data/user.json");
-
+const router = express.Router();
 const app = express();
+const mongoose = require('mongoose');
+require('dotenv').config();
 
-app.get('/getUser', (req, res) => {
-    if(req) {
-        console.log("User JSON requested!");
-    }
-    res.json(userJSON);
-})
+const dataRoute = require('./routes/dataRoute');
+const AuthRoute = require('./routes/AuthRoute');
+const SignInRoute = require('./routes/SignInRoute');
 
-app.get('/getData', (req, res) => {
-    if(req) {
-        console.log("Data JSON requested!");
-    }
-    res.json(dataJSON);
-})
+const User = require('./models/UserModel');
 
-app.listen(port, () => {
-    console.log("Backend running on " + port);
-})
+app.use(express.json());
+
+const connectionString = process.env.SECRET_CONNECTION_STRING;
+
+mongoose.connect(connectionString)
+    .then(() => {
+        console.log('connected');
+
+        app.use('/auth', AuthRoute);
+
+        app.use('/signIn', SignInRoute);
+
+        app.use('/getData', dataRoute);
+
+        app.listen(3001, () => {
+            console.log("Backend running on 3001");
+        })
+
+    })
+    .catch(err => console.error(err))
+
+// npm install express
+// npm install mongoose
+// npm install dotenv
+// npm install nodemon

@@ -44,3 +44,7 @@
     background-color: #888;
     transition: 0.5s;
 }
+
+.loginMain > p {
+    color: white;
+}

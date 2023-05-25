@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css"
-import Card from "../Components/Card";
+import Card from "../../Components/Card";
 
 function Dashboard() {
     const [tickets, setTickets] = useState();
@@ -30,11 +30,11 @@ function Dashboard() {
 
     return (
         <main className="dashboardMain">
-            <h1>Tickets</h1>
+            <h1>Dashboard</h1>
             <div className="cardWrapper">
-                <Card statusValue={countOpenStatus} statusType="Open" href="/openStatusTickets"/>
-                <Card statusValue={countClosedStatus} statusType="Closed" href="/closedStatusTickets"/>
-                <Card statusValue={countPendingStatus} statusType="Pending" href="/pendingStatusTickets"/>
+                <Card statusValue={countOpenStatus} statusType="Aberto" href="/openStatusTickets"/>
+                <Card statusValue={countClosedStatus} statusType="Fechado" href="/closedStatusTickets"/>
+                <Card statusValue={countPendingStatus} statusType="Pendente" href="/pendingStatusTickets"/>
             </div>
         </main>
     )

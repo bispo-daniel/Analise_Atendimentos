@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./open.css"
-import Ticket from "../Components/Ticket";
-import { get } from "../Scripts/getTicketsByStatusType"
+import "./Tickets.css"
+import Ticket from "../../Components/Ticket";
+import { get } from "../../Scripts/getTicketsByStatusType"
 
 function ClosedStatusTickets() {
     const [tickets, setTickets] = useState();
@@ -19,7 +19,7 @@ function ClosedStatusTickets() {
             {
                 arrayOfArrays != null? arrayOfArrays.map((arr, index) => {
                     return (
-                        <Ticket key={index} ticketId={arr[0]} ticketStatus={arr[1]} contactName={arr[2]} contactNumber={arr[3]} createdAt={arr[4]}/>
+                        <Ticket key={index} ticketId={arr[0]} ticketStatus="Fechado" contactName={arr[2]} contactNumber={arr[3]} createdAt={arr[4]}/>
                     )
                 }) : console.log("Array nulo...")
             }
