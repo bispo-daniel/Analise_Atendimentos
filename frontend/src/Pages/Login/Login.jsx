@@ -17,7 +17,7 @@ function Login(){
 
     async function login(body){
         try {
-            await axios.post('/auth', body);
+            await axios.post('/api/auth', body);
 
             return true
         } catch (error) {
