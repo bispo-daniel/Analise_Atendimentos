@@ -17,9 +17,13 @@ function Login(){
 
     async function login(body){
         try {
-            await axios.post('https://analise-atendimentos-backend.onrender.com/auth', body);
+            let response = await axios.post('https://analise-atendimentos-backend.onrender.com/auth', body);
 
-            return true
+            if (response.status === 200 && response.data.message === 'User logged!') {
+                return true
+            } else {
+                return false
+            }
         } catch (error) {
             console.error(error);
         }
