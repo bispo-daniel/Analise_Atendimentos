@@ -17,7 +17,7 @@ function Login(){
 
     async function login(body){
         try {
-            await axios.post('/api/auth', body);
+            await axios.post('https://analise-atendimentos-backend.onrender.com/auth', body);
 
             return true
         } catch (error) {
