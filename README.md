@@ -1,6 +1,23 @@
-# Análise atendimentos
+# Análise de atendimentos
 
-# V2 (MongoDB connection)
+# V3 (Header & bootstrap & ticket date format)
+
+### `Create account`
+![all-text](https://github.com/bispo-daniel/Analise_Atendimentos/blob/main/Screenshots/V3/SignIn.png)
+
+### `Login`
+![all-text](https://github.com/bispo-daniel/Analise_Atendimentos/blob/main/Screenshots/V3/Login.png)
+
+### `Dashboard`
+![all-text](https://github.com/bispo-daniel/Analise_Atendimentos/blob/main/Screenshots/V3/Dashboard.png)
+
+### `Tickets`
+![all-text](https://github.com/bispo-daniel/Analise_Atendimentos/blob/main/Screenshots/V3/Tickets.png)
+
+
+# Previous versions:
+
+## V2 (MongoDB connection)
 
 ### `Empty Database:`
 ![all-text](https://github.com/bispo-daniel/Analise_Atendimentos/blob/main/Screenshots/V2/EmptyDB.png)
@@ -28,8 +45,6 @@
 
 ### `Pending status tickets:`
 ![all-text](https://github.com/bispo-daniel/Analise_Atendimentos/blob/main/Screenshots/V2/PendingTickets.png)
-
-# Previous version:
 
 ## MVP
 

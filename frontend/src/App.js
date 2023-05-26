@@ -6,16 +6,18 @@ import OpenStatusTickets from "./Pages/Tickets/OpenStatus";
 import ClosedStatusTickets from "./Pages/Tickets/ClosedStatus";
 import PendingStatusTickets from "./Pages/Tickets/PendingStatus";
 
+import Header from "./Components/Header/Header";
+
 function App() {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Login />}/>
                 <Route path="/signIn" element={<SignIn />}/>
-                <Route path="/dashboard" element={< Dashboard/>} />
-                <Route path="/openStatusTickets" element={< OpenStatusTickets/>} />
-                <Route path="/closedStatusTickets" element={< ClosedStatusTickets/>} />
-                <Route path="/pendingStatusTickets" element={< PendingStatusTickets/>} />
+                <Route path="/dashboard" element={<> <Header/><Dashboard/> </>} />
+                <Route path="/openStatusTickets" element={<> <Header/> <OpenStatusTickets/> </>} />
+                <Route path="/closedStatusTickets" element={<> <Header/> <ClosedStatusTickets/> </>} />
+                <Route path="/pendingStatusTickets" element={<> <Header/> <PendingStatusTickets/> </>} />
             </Routes>
         </BrowserRouter>
     )

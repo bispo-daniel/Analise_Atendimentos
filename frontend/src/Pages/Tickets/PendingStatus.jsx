@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Tickets.css"
-import Ticket from "../../Components/Ticket";
+import Ticket from "../../Components/Ticket/Ticket";
 import {get} from "../../Scripts/getTicketsByStatusType"
 
 function PendingStatusTickets() {

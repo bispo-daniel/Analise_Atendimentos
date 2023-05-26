@@ -1,0 +1,27 @@
+header {
+    height: 60px;
+    width: 100%;
+    max-width: 1440px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #087099;
+
+    margin-bottom: 50px;
+
+    padding: 0px 35px 0px 35px;
+}
+
+header > h1 {
+    font-weight: 100;
+    font-size: 25px;
+    color: white;
+}
+
+@media screen and (max-width: 425px) {
+    header {
+        padding: 0px 15px 0px 15px;
+    }
+}

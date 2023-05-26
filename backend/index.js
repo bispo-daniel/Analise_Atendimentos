@@ -3,6 +3,7 @@ const router = express.Router();
 const app = express();
 const mongoose = require('mongoose');
 require('dotenv').config();
+const cors = require('cors');
 
 const dataRoute = require('./routes/dataRoute');
 const AuthRoute = require('./routes/AuthRoute');
@@ -17,6 +18,8 @@ const connectionString = process.env.SECRET_CONNECTION_STRING;
 mongoose.connect(connectionString)
     .then(() => {
         console.log('connected');
+
+        app.use(cors());
 
         app.use('/auth', AuthRoute);
 
@@ -35,3 +38,4 @@ mongoose.connect(connectionString)
 // npm install mongoose
 // npm install dotenv
 // npm install nodemon
+// npm install cors

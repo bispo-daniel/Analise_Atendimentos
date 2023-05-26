@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css"
-import Card from "../../Components/Card";
+import Card from "../../Components/Card/Card";
 
 function Dashboard() {
     const [tickets, setTickets] = useState();
