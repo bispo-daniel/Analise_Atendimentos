@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: space-evenly;
 
-    background-color: #087099;
+    background-color: #202050;
     border-radius: 5px;
 
     margin-top: 10%;
@@ -43,7 +43,8 @@
 }
 
 .signInMain > button:hover {
-    background-color: #888;
+    background-color: #198754;
+    color: whitesmoke;
     transition: 0.5s;
 }
 

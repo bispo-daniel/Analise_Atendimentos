@@ -3,13 +3,13 @@ export function get(tickets, statusType) {
 
     if(tickets) {
         tickets.filter(ticketObj => {
-            if (ticketObj.status === statusType) {
+            if (ticketObj.type === statusType) {
 
                 const date = ticketObj.createdAt
 
                 let formattedDate = new Date(date).toLocaleString();
 
-                let newArray = [ticketObj.id, ticketObj.status.toUpperCase(), ticketObj.contact.name, ticketObj.contact.number, formattedDate]
+                let newArray = [ticketObj.number, ticketObj.type.toUpperCase(), ticketObj.clientName, ticketObj.telephone, formattedDate]
                 arrayOfArrays.push(newArray)
 
                 return arrayOfArrays;
@@ -19,5 +19,5 @@ export function get(tickets, statusType) {
         })
     }
 
-    return arrayOfArrays
+    return arrayOfArrays;
 }

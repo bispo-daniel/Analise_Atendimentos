@@ -5,23 +5,44 @@ header {
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
-    background-color: #087099;
+    background-color: #202050;
 
     margin-bottom: 50px;
-
-    padding: 0px 35px 0px 35px;
 }
 
-header > h1 {
-    font-weight: 100;
-    font-size: 25px;
+header > .buttonWrapper {
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+header > .buttonWrapper > a {
+    height: 100%;
+    width: 40%;
+    max-width: 200px;
+}
+
+header > .buttonWrapper > a > button {
+    width: 100%;
+    height: 100%;
+
     color: white;
+
+    border: none;
+    border-radius: 0 0 10px 10px;
+    background-color: #00000033;
 }
 
-@media screen and (max-width: 425px) {
-    header {
-        padding: 0px 15px 0px 15px;
-    }
+header > .buttonWrapper > a > button:hover {
+    transition: 0.5s;
+    background-color: #00000055;
+}
+
+header > .buttonWrapper > a > button.active {
+    background-color: #00000055;
 }

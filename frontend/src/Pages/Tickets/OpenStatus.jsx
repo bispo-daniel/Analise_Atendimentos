@@ -7,12 +7,12 @@ function OpenStatusTickets() {
     const [tickets, setTickets] = useState();
 
     useEffect(() => {
-        fetch('https://analise-atendimentos-backend.onrender.com/getData')
+        fetch('https://analise-atendimentos-backend.onrender.com/getTickets')
             .then(response => response.json())
-            .then(json => setTickets(json.tickets))
+            .then(json => setTickets(json))
     }, [])
 
-    let arrayOfArrays = get(tickets, "open");
+    let arrayOfArrays = get(tickets, "Aberto");
 
     return (
         <main className="ticketWrapper">

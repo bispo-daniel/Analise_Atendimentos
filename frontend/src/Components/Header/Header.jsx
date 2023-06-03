@@ -1,18 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Header.css'
 
 function Header() {
-    function goBack() {
-        window.history.back();
-    }
+    useEffect(() => {
+        let path = window.location.pathname;
+
+        if(path === "/dashboard"){
+            let dashboardButton = document.getElementById('dashboardButton');
+            dashboardButton.className = 'active';
+        } else if(path === "/createTicket") {
+            let createTicketButton = document.getElementById('createTicketButton');
+            createTicketButton.className = 'active';
+        }
+    }, [])
 
     return (
         <header>
-            <h1>Seja bem-vindo(a)!</h1>
-
-            <button type="button" className="btn btn-light" onClick={e => goBack()}>
-                Voltar
-            </button>
+            <div className="buttonWrapper">
+                <a href="/dashboard">
+                    <button id="dashboardButton">
+                        Dashboard
+                    </button>
+                </a>
+                <a href="/createTicket">
+                    <button id="createTicketButton">
+                        Criar Ticket
+                    </button>
+                </a>
+            </div>
         </header>
     )
 }

@@ -7,12 +7,12 @@ function PendingStatusTickets() {
     const [tickets, setTickets] = useState();
 
     useEffect(() => {
-        fetch('https://analise-atendimentos-backend.onrender.com/getData')
+        fetch('https://analise-atendimentos-backend.onrender.com/getTickets')
             .then(response => response.json())
-            .then(json => setTickets(json.tickets))
+            .then(json => setTickets(json))
     }, [])
 
-    let arrayOfArrays = get(tickets, "pending");
+    let arrayOfArrays = get(tickets, "Pendente");
 
     return (
         <main className="ticketWrapper">

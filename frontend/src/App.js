@@ -5,6 +5,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import OpenStatusTickets from "./Pages/Tickets/OpenStatus";
 import ClosedStatusTickets from "./Pages/Tickets/ClosedStatus";
 import PendingStatusTickets from "./Pages/Tickets/PendingStatus";
+import CreateTicket from "./Pages/CreateTicket/CreateTicket"
 
 import Header from "./Components/Header/Header";
 
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/openStatusTickets" element={<> <Header/> <OpenStatusTickets/> </>} />
                 <Route path="/closedStatusTickets" element={<> <Header/> <ClosedStatusTickets/> </>} />
                 <Route path="/pendingStatusTickets" element={<> <Header/> <PendingStatusTickets/> </>} />
+                <Route path="/createTicket" element={<> <Header/> <CreateTicket/> </>} />
             </Routes>
         </BrowserRouter>
     )

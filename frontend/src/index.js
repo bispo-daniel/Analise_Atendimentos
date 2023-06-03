@@ -13,3 +13,5 @@ root.render(
 
 // npm install axios
 // npm install bootstrap
+// npm install http-proxy-middleware
+// npm install dotenv

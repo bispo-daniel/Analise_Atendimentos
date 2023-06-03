@@ -5,11 +5,10 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const cors = require('cors');
 
-const dataRoute = require('./routes/dataRoute');
 const AuthRoute = require('./routes/AuthRoute');
 const SignInRoute = require('./routes/SignInRoute');
-
-const User = require('./models/UserModel');
+const CreateTicketRoute = require('./routes/CreateTicketRoute');
+const GetTicketsRoute = require('./routes/GetTicketsRoute');
 
 app.use(express.json());
 
@@ -25,7 +24,9 @@ mongoose.connect(connectionString)
 
         app.use('/signIn', SignInRoute);
 
-        app.use('/getData', dataRoute);
+        app.use('/createTicket', CreateTicketRoute);
+
+        app.use('/getTickets', GetTicketsRoute);
 
         app.listen(3001, () => {
             console.log("Backend running on 3001");

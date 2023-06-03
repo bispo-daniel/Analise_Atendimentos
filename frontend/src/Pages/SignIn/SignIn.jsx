@@ -1,19 +1,9 @@
 import React from "react";
 import "./SignIn.css";
 import axios from 'axios';
+const errorMessage = require("../../Scripts/errorMessage");
 
 function SignIn() {
-    function userNotCreated() {
-        if(!document.getElementById('userNotCreated')) {
-            let p = document.createElement('p');
-            p.setAttribute("id", "userNotCreated")
-            p.style.color = 'red';
-            p.innerHTML = 'Conta não pode ser criada...'
-    
-            let signInMain = document.getElementsByClassName('signInMain')[0];
-            signInMain.appendChild(p);
-        } 
-    }
 
     async function apiCall(body) {
         try {
@@ -23,7 +13,7 @@ function SignIn() {
             
         } catch (error) {
             console.error();
-            userNotCreated();
+            errorMessage();
         }
     }
 
@@ -41,7 +31,7 @@ function SignIn() {
         let userCreated = await apiCall(body);
 
         if(!userCreated) {
-            userNotCreated();
+            errorMessage();
         } else {
             window.location = '/'
         }

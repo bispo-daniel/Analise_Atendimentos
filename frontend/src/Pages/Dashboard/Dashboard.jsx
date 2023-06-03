@@ -6,9 +6,9 @@ function Dashboard() {
     const [tickets, setTickets] = useState();
 
     useEffect(() => {
-        fetch("https://analise-atendimentos-backend.onrender.com/getData")
+        fetch("https://analise-atendimentos-backend.onrender.com/getTickets")
             .then(response => response.json())
-            .then(json => setTickets(json.tickets))
+            .then(json => setTickets(json))
     }, [])
 
     let countOpenStatus = 0;
@@ -17,24 +17,25 @@ function Dashboard() {
 
     if (tickets != null) {
         tickets.forEach(element => {
-            if (element.status === "open") {
+            if (element.type === "Aberto") {
                 countOpenStatus++;
-            } else if (element.status === "closed") {
+            } else if (element.type === "Fechado") {
                 countClosedStatus++;
-            } else if (element.status === "pending") {
+            } else if (element.type === "Pendente") {
                 countPendingStatus++;
             }
         });
     
     }
 
+
     return (
         <main className="dashboardMain">
             <h1>Dashboard</h1>
             <div className="cardWrapper">
-                <Card statusValue={countOpenStatus} statusType="Aberto" href="/openStatusTickets"/>
-                <Card statusValue={countClosedStatus} statusType="Fechado" href="/closedStatusTickets"/>
-                <Card statusValue={countPendingStatus} statusType="Pendente" href="/pendingStatusTickets"/>
+                <Card statusValue={countOpenStatus} statusType="Abertos" href="/openStatusTickets"/>
+                <Card statusValue={countClosedStatus} statusType="Fechados" href="/closedStatusTickets"/>
+                <Card statusValue={countPendingStatus} statusType="Pendentes" href="/pendingStatusTickets"/>
             </div>
         </main>
     )

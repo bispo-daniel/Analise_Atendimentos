@@ -1,19 +1,9 @@
 import "./Login.css"
 import axios from 'axios';
 import React from "react";
+const errorMessage = require("../../Scripts/errorMessage");
 
 function Login(){
-    function accountNotFound() {
-        if(!document.getElementById('accountNotFound')) {
-            let p = document.createElement('p');
-            p.setAttribute("id", "accountNotFound")
-            p.style.color = 'red';
-            p.innerHTML = 'Conta não encontrada...'
-    
-            let loginMain = document.getElementsByClassName('loginMain')[0];
-            loginMain.appendChild(p);
-        } 
-    }
 
     async function login(body){
         try {
@@ -38,7 +28,7 @@ function Login(){
         const user = await login(credentials);
 
         if(!user) {
-            accountNotFound();
+            errorMessage();
         } else {
             window.location = '/dashboard';
         }
@@ -55,7 +45,7 @@ function Login(){
     return (
         <main onKeyUp={e => enterDown(e)} className="loginMain">
             <h1>Login</h1>
-            <input type="text" name="email" id="emailInput" placeholder="Usuário"/>
+            <input type="text" name="email" id="emailInput" placeholder="E-Mail"/>
             <input type="password" name="password" id="passwordInput" placeholder="Senha"/>
             <button onClick={e => eventHandler()}>Entrar</button>
             <p>Não tem uma conta? <a href="/signIn">Inscreva-se</a></p>

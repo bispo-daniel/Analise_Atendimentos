@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: space-evenly;
 
-    background-color: #087099;
+    background-color: #202050;
     border-radius: 5px;
 }
 
@@ -43,13 +43,19 @@
 }
 
 .loginMain > button:hover {
-    background-color: #888;
+    background-color: #198754;
+    color: whitesmoke;
     transition: 0.5s;
 }
 
 .loginMain > p {
     color: white;
 }
-.loginMain > p > a{
-    color: #333;
+.loginMain > p > a {
+    color: white;
+}
+
+.loginMain > p > a:hover {
+    font-weight: bold;
+    transition: 0.3s;
 }
