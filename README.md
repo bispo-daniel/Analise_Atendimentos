@@ -1,6 +1,22 @@
 # Análise de atendimentos
 
-# V4 
+# V4 (New colors, Header update, create and read tickets functionality)
+
+### `Login`
+![all-text](https://github.com/bispo-daniel/Analise_Atendimentos/blob/main/Screenshots/V4/Login.png)
+
+### `Create account`
+![all-text](https://github.com/bispo-daniel/Analise_Atendimentos/blob/main/Screenshots/V4/SignIn.png)
+
+### `Dashboard`
+![all-text](https://github.com/bispo-daniel/Analise_Atendimentos/blob/main/Screenshots/V4/Dashboard.png)
+
+### `Tickets`
+![all-text](https://github.com/bispo-daniel/Analise_Atendimentos/blob/main/Screenshots/V4/Tickets.png)
+
+### `Create Ticket`
+![all-text](https://github.com/bispo-daniel/Analise_Atendimentos/blob/main/Screenshots/V4/CreateTicket.png)
+
 
 # Previous versions:
 
