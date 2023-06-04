@@ -21,6 +21,6 @@
 
 .ticketMain:hover {
     transform: scale(1.05);
-    filter: brightness(1.15);
+    background-color: #202050aa;
     transition: 0.5s;
 }

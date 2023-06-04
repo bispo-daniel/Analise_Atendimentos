@@ -15,6 +15,8 @@
     transform: scale(1.05);
     transition: 0.5s;
 
+    background-color: #00000055 !important;
+
     color: white !important;
 }
 
