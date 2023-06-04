@@ -1,6 +1,7 @@
 import React from "react";
 import "./CreateTicket.css";
 import axios from "axios";
+import Header from "../../Components/Header/Header"
 let errorMessage = require("../../Scripts/errorMessage");
 
 function CreateTicket() {
@@ -50,30 +51,31 @@ function CreateTicket() {
     }
 
     return (
-        <main className="createTicketMain" onKeyUp={e => enterDown(e)}>
-            <h1>Crie um Ticket</h1>
+        <>
+            <Header/>
+            <main className="createTicketMain" onKeyUp={e => enterDown(e)}>
+                <h1>Crie um Ticket</h1>
             
-            <div className="radioGroup">
-                <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="ticketType" id="inlineRadio1" value="Aberto" />
-                    <label className="form-check-label" htmlFor="inlineRadio1">Aberto</label>
+                <div className="radioGroup">
+                    <div className="form-check form-check-inline">
+                        <input className="form-check-input" type="radio" name="ticketType" id="inlineRadio1" value="Aberto" />
+                        <label className="form-check-label" htmlFor="inlineRadio1">Aberto</label>
+                    </div>
+                    <div className="form-check form-check-inline">
+                        <input className="form-check-input" type="radio" name="ticketType" id="inlineRadio2" value="Fechado" />
+                        <label className="form-check-label" htmlFor="inlineRadio2">Fechado</label>
+                    </div>
+                    <div className="form-check form-check-inline">
+                        <input className="form-check-input" type="radio" name="ticketType" id="inlineRadio3" value="Pendente" />
+                        <label className="form-check-label" htmlFor="inlineRadio3">Pendente</label>
+                    </div>
                 </div>
-                <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="ticketType" id="inlineRadio2" value="Fechado" />
-                    <label className="form-check-label" htmlFor="inlineRadio2">Fechado</label>
-                </div>
-                <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="ticketType" id="inlineRadio3" value="Pendente" />
-                    <label className="form-check-label" htmlFor="inlineRadio3">Pendente</label>
-                </div>
-            </div>
-
-            <input type="number" name="" id="ticketNumberInput" placeholder="Número do atendimento"/>
-            <input type="text" name="" id="clientNameInput" placeholder="Nome do cliente"/>
-            <input type="number" name="" id="telephoneInput" placeholder="Telefone"/>
-
-            <button className="btn btn-success m-3 w-50" onClick={e => eventHandler()}>Criar</button>
-        </main>
+                <input type="number" name="" id="ticketNumberInput" placeholder="Número do atendimento"/>
+                <input type="text" name="" id="clientNameInput" placeholder="Nome do cliente"/>
+                <input type="number" name="" id="telephoneInput" placeholder="Telefone"/>
+                <button className="btn btn-success m-3 w-50" onClick={e => eventHandler()}>Criar</button>
+            </main>
+        </>
     )
 }
 

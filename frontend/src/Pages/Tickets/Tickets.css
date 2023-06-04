@@ -6,3 +6,9 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+@media screen and (max-width: 425px) {
+    .ticketWrapper {
+        margin-bottom: 80px;
+    }
+}

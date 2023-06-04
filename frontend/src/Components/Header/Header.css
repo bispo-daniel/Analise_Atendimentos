@@ -19,6 +19,7 @@ header > .buttonWrapper {
 
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 header > .buttonWrapper > a {
@@ -45,4 +46,16 @@ header > .buttonWrapper > a > button:hover {
 
 header > .buttonWrapper > a > button.active {
     background-color: #00000055;
+}
+
+@media screen and (max-width: 425px) {
+    header {
+        margin: 50px 0 0 0;
+        position: fixed;
+        bottom: 0;
+    }
+
+    header > .buttonWrapper > a > button {
+        border-radius: 10px 10px 0 0;
+    }
 }

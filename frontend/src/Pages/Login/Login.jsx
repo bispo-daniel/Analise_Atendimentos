@@ -10,6 +10,9 @@ function Login(){
             let response = await axios.post('https://analise-atendimentos-backend.onrender.com/auth', body);
 
             if (response.status === 200 && response.data.message === 'User logged!') {
+                let token = response.data.token;
+                localStorage.setItem('token', token);
+                
                 return true
             } else {
                 return false
@@ -30,7 +33,7 @@ function Login(){
         if(!user) {
             errorMessage();
         } else {
-            window.location = '/dashboard';
+            window.location = '/'
         }
     }
 

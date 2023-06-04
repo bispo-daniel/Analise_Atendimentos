@@ -15,3 +15,4 @@ root.render(
 // npm install bootstrap
 // npm install http-proxy-middleware
 // npm install dotenv
+// npm install jwt-decode

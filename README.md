@@ -17,7 +17,6 @@
 ### `Create Ticket`
 ![all-text](https://github.com/bispo-daniel/Analise_Atendimentos/blob/main/Screenshots/V4/CreateTicket.png)
 
-
 # Previous versions:
 
 # V3 (Header & bootstrap & ticket date format)

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css"
+import Header from "../../Components/Header/Header";
 import Card from "../../Components/Card/Card";
 
 function Dashboard() {
@@ -28,16 +29,18 @@ function Dashboard() {
     
     }
 
-
     return (
-        <main className="dashboardMain">
-            <h1>Dashboard</h1>
-            <div className="cardWrapper">
-                <Card statusValue={countOpenStatus} statusType="Abertos" href="/openStatusTickets"/>
-                <Card statusValue={countClosedStatus} statusType="Fechados" href="/closedStatusTickets"/>
-                <Card statusValue={countPendingStatus} statusType="Pendentes" href="/pendingStatusTickets"/>
-            </div>
-        </main>
+        <>
+            <Header />
+            <main className="dashboardMain">
+                <h1>Dashboard</h1>
+                <div className="cardWrapper">
+                    <Card statusValue={countOpenStatus} statusType="Abertos" href="/openStatusTickets"/>
+                    <Card statusValue={countClosedStatus} statusType="Fechados" href="/closedStatusTickets"/>
+                    <Card statusValue={countPendingStatus} statusType="Pendentes" href="/pendingStatusTickets"/>
+                </div>
+            </main>
+        </>
     )
 }
 

@@ -14,6 +14,13 @@ function Header() {
         }
     }, [])
 
+    function exit() {
+        if(localStorage.getItem('token')) {
+            localStorage.removeItem('token');
+            window.location.reload();
+        }
+    }
+
     return (
         <header>
             <div className="buttonWrapper">
@@ -22,6 +29,7 @@ function Header() {
                         Dashboard
                     </button>
                 </a>
+                <button className="btn btn-danger h-75" onClick={e => exit()}>sair</button>
                 <a href="/createTicket">
                     <button id="createTicketButton">
                         Criar Ticket

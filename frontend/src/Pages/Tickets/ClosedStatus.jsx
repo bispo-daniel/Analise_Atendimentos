@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Tickets.css"
 import Ticket from "../../Components/Ticket/Ticket";
 import { get } from "../../Scripts/getTicketsByStatusType"
+import Header from "../../Components/Header/Header";
 
 function ClosedStatusTickets() {
     const [tickets, setTickets] = useState();
@@ -15,15 +16,18 @@ function ClosedStatusTickets() {
     let arrayOfArrays = get(tickets, "Fechado");
 
     return (
-        <main className="ticketWrapper">
-            {
-                arrayOfArrays != null? arrayOfArrays.map((arr, index) => {
-                    return (
-                        <Ticket key={index} ticketId={arr[0]} ticketStatus="Fechado" contactName={arr[2]} contactNumber={arr[3]} createdAt={arr[4]}/>
-                    )
-                }) : console.log("Array nulo...")
-            }
-        </main>
+        <>
+            <Header/>
+            <main className="ticketWrapper">
+                {
+                    arrayOfArrays != null? arrayOfArrays.map((arr, index) => {
+                        return (
+                            <Ticket key={index} ticketId={arr[0]} ticketStatus="Fechado" contactName={arr[2]} contactNumber={arr[3]} createdAt={arr[4]}/>
+                        )
+                    }) : console.log("Array nulo...")
+                }
+            </main>
+        </>
     )
 }
 

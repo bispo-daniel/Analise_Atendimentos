@@ -40,3 +40,4 @@ mongoose.connect(connectionString)
 // npm install dotenv
 // npm install nodemon
 // npm install cors
+// npm install jsonwebtoken
