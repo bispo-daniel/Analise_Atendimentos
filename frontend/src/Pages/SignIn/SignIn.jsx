@@ -1,20 +1,30 @@
 import React from "react";
 import "./SignIn.css";
 import axios from 'axios';
-const errorMessage = require("../../Scripts/errorMessage");
+const Message = require("../../Scripts/Message");
 
 function SignIn() {
+    let executed = false;
 
-    async function apiCall(body) {
-        try {
+    async function signIn(body) {
+        let responseMessage = '';
 
-            await axios.post('https://analise-atendimentos-backend.onrender.com/signIn', body);
-            return true;
-            
-        } catch (error) {
-            console.error();
-            errorMessage();
-        }
+        if (!executed) {
+            executed = true;
+
+            await axios.post('https://analise-atendimentos-backend.onrender.com/signIn', body)
+                .then(response => {
+                    if(response.status === 200) {
+                        responseMessage = response.data.message;
+                    }
+                })
+                .catch(error => {
+                    responseMessage = error.response.data.message;
+                })
+                
+            }
+        
+        return responseMessage;
     }
 
     async function eventHandler() {
@@ -28,12 +38,13 @@ function SignIn() {
             password: passwordInput
         }
 
-        let userCreated = await apiCall(body);
+        let signInMessage = await signIn(body);
 
-        if(!userCreated) {
-            errorMessage();
+        if(signInMessage === "Usuário criado com sucesso!") {
+            Message(signInMessage);
+            window.location = '/';
         } else {
-            window.location = '/'
+            Message(signInMessage);
         }
     }
     

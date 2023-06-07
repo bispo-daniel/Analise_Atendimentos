@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
-import "./Tickets.css"
-import Ticket from "../../Components/Ticket/Ticket";
-import { get } from "../../Scripts/getTicketsByStatusType"
+import "./Tickets.css";
+import axios from "axios";
+
 import Header from "../../Components/Header/Header";
+import Ticket from "../../Components/Ticket/Ticket";
+import { get } from "../../Scripts/getTicketsByStatusType";
 
 function ClosedStatusTickets() {
     const [tickets, setTickets] = useState();
 
     useEffect(() => {
-        fetch('https://analise-atendimentos-backend.onrender.com/getTickets')
-            .then(response => response.json())
-            .then(json => setTickets(json))
+        axios.get('https://analise-atendimentos-backend.onrender.com/getTickets').then(response => {
+            let data = response.data;
+            setTickets(data);
+        })
     }, [])
 
     let arrayOfArrays = get(tickets, "Fechado");

@@ -1,25 +1,26 @@
 import "./Login.css"
 import axios from 'axios';
 import React from "react";
-const errorMessage = require("../../Scripts/errorMessage");
+const Message = require("../../Scripts/Message");
 
 function Login(){
-
     async function login(body){
-        try {
-            let response = await axios.post('https://analise-atendimentos-backend.onrender.com/auth', body);
+        let responseMessage = '';
 
-            if (response.status === 200 && response.data.message === 'User logged!') {
-                let token = response.data.token;
-                localStorage.setItem('token', token);
-                
-                return true
-            } else {
-                return false
-            }
-        } catch (error) {
-            console.error(error);
-        }
+        await axios.post('https://analise-atendimentos-backend.onrender.com/auth', body)
+            .then(response => {
+                if (response.status === 200) {
+                    let token = response.data.token;
+                    localStorage.setItem('token', token);
+
+                    responseMessage = response.data.message;
+                } 
+            })
+            .catch(error => {
+                responseMessage = error.response.data.message;
+            })
+            
+        return responseMessage;
     }
     
     async function eventHandler() {
@@ -28,12 +29,13 @@ function Login(){
 
         const credentials = {email: emailInput, password: passwordInput}
 
-        const user = await login(credentials);
+        const loginMessage = await login(credentials);
 
-        if(!user) {
-            errorMessage();
+        if (loginMessage === "Usuário logado!") {
+            Message(loginMessage);
+            window.location.reload();
         } else {
-            window.location = '/'
+            Message(loginMessage);
         }
     }
 

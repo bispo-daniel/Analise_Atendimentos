@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css"
+import axios from "axios";
+
 import Header from "../../Components/Header/Header";
 import Card from "../../Components/Card/Card";
 
@@ -7,9 +9,10 @@ function Dashboard() {
     const [tickets, setTickets] = useState();
 
     useEffect(() => {
-        fetch("https://analise-atendimentos-backend.onrender.com/getTickets")
-            .then(response => response.json())
-            .then(json => setTickets(json))
+        axios.get('https://analise-atendimentos-backend.onrender.com/getTickets').then(response => {
+            let data = response.data;
+            setTickets(data);
+        });
     }, [])
 
     let countOpenStatus = 0;

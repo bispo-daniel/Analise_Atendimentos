@@ -1,5 +1,18 @@
 # Análise de atendimentos
 
+# V6 (Structure update)
+
+    Client cannot create duplicate tickets or users;
+    HTTP client standardization (all http requests handled with axios);
+    Messages from backend to the view;
+
+# V5 (JWT, Header update, exit account)
+
+    Jason Web Token implemented to check if the client trying to access any route is logged.
+    Exit account button in the header.
+
+# Previous versions:
+
 # V4 (New colors, Header update, create and read tickets functionality)
 
 ### `Login`
@@ -16,8 +29,6 @@
 
 ### `Create Ticket`
 ![all-text](https://github.com/bispo-daniel/Analise_Atendimentos/blob/main/Screenshots/V4/CreateTicket.png)
-
-# Previous versions:
 
 # V3 (Header & bootstrap & ticket date format)
 

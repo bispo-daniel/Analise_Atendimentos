@@ -2,22 +2,29 @@ import React from "react";
 import "./CreateTicket.css";
 import axios from "axios";
 import Header from "../../Components/Header/Header"
-let errorMessage = require("../../Scripts/errorMessage");
+let Message = require("../../Scripts/Message");
 
 function CreateTicket() {
-    async function apiPost(body) {
-        try {
-            let ticket = await axios.post('https://analise-atendimentos-backend.onrender.com/createTicket', body);
+    let executed = false;
 
-            if (ticket.status === 200) {
-                return 200;
-            } else {
-                errorMessage();
-            }
-        } catch (error) {
-            console.error(error);
-            errorMessage();
+    async function createTicket(body) {
+        let responseMessage = '';
+
+        if(!executed) {
+            executed = true;
+            
+            await axios.post('https://analise-atendimentos-backend.onrender.com/createTicket', body)
+                .then(response => {
+                    if (response.status === 200) {
+                        responseMessage = response.data.message;
+                    }
+                })
+                .catch(error => {
+                    responseMessage = error.response.data.message;
+                })  
         }
+            
+        return responseMessage;
     }
 
     const eventHandler = async () => {
@@ -29,24 +36,33 @@ function CreateTicket() {
         let check = radioChecked && ticketNumber !== "" && clientName !== "" && telephone !== "";
 
         if(check) {
-            let body = {number: ticketNumber, type: radioChecked.value, clientName: clientName, telephone: telephone};
-            let response = await apiPost(body);
+            let body = {
+                number: ticketNumber, 
+                type: radioChecked.value, 
+                clientName: clientName, 
+                telephone: telephone
+            };
 
-            if(response === 200) {
+            let createTicketMessage = await createTicket(body);
+
+            if(createTicketMessage === "Ticket criado com sucesso!") {
+                Message(createTicketMessage);
                 window.location = '/dashboard';
+                
             } else {
-                errorMessage();
+                Message(createTicketMessage);
             }
+
         } else {
-            errorMessage();
+            Message("Ticket não pode ser criado");
         }
     }
 
     const enterDown = (e) => {
         e.preventDefault();
-        let keyCode = e.code || e.key
+        let keyCode = e.code || e.key;
         if(keyCode === 'Enter'){
-            eventHandler()
+            eventHandler();
         }
     }
 
