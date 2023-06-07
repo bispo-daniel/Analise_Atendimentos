@@ -10,18 +10,17 @@ function SignIn() {
         let responseMessage = '';
 
         if (!executed) {
-            executed = true;
 
             await axios.post('https://analise-atendimentos-backend.onrender.com/signIn', body)
                 .then(response => {
                     if(response.status === 200) {
+                        executed = true;
                         responseMessage = response.data.message;
                     }
                 })
                 .catch(error => {
                     responseMessage = error.response.data.message;
                 })
-                
             }
         
         return responseMessage;

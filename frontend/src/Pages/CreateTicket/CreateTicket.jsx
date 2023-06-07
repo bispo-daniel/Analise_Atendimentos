@@ -11,11 +11,11 @@ function CreateTicket() {
         let responseMessage = '';
 
         if(!executed) {
-            executed = true;
             
             await axios.post('https://analise-atendimentos-backend.onrender.com/createTicket', body)
                 .then(response => {
                     if (response.status === 200) {
+                        executed = true;
                         responseMessage = response.data.message;
                     }
                 })
