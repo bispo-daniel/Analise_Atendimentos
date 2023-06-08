@@ -18,15 +18,19 @@ function Dashboard() {
     let countOpenStatus = 0;
     let countClosedStatus = 0;
     let countPendingStatus = 0;
+    let countTickets = 0;
 
     if (tickets != null) {
         tickets.forEach(element => {
             if (element.type === "Aberto") {
                 countOpenStatus++;
+                countTickets++;
             } else if (element.type === "Fechado") {
                 countClosedStatus++;
+                countTickets++;
             } else if (element.type === "Pendente") {
                 countPendingStatus++;
+                countTickets++;
             }
         });
     
@@ -38,9 +42,14 @@ function Dashboard() {
             <main className="dashboardMain">
                 <h1>Dashboard</h1>
                 <div className="cardWrapper">
-                    <Card statusValue={countOpenStatus} statusType="Abertos" href="/openStatusTickets"/>
-                    <Card statusValue={countClosedStatus} statusType="Fechados" href="/closedStatusTickets"/>
-                    <Card statusValue={countPendingStatus} statusType="Pendentes" href="/pendingStatusTickets"/>
+                    <div className="inlineCards">
+                        <Card statusValue={countOpenStatus} statusType="Abertos" href="/openStatusTickets" width="25%"/>
+                        <Card statusValue={countClosedStatus} statusType="Fechados" href="/closedStatusTickets" width="25%"/>
+                        <Card statusValue={countPendingStatus} statusType="Pendentes" href="/pendingStatusTickets" width="25%"/>
+                    </div>
+                    <div className="full">
+                        <Card statusValue={countTickets} statusType="Todos" href="/allTickets" width="90%"/>
+                    </div>
                 </div>
             </main>
         </>

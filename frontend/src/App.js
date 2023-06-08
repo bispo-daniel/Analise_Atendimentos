@@ -10,6 +10,7 @@ import ClosedStatusTickets from "./Pages/Tickets/ClosedStatus";
 import PendingStatusTickets from "./Pages/Tickets/PendingStatus";
 import CreateTicket from "./Pages/CreateTicket/CreateTicket"
 import Loading from "./Pages/Loading/Loading.jsx"
+import AllTickets from './Pages/Tickets/AllTickets';
 
 function App() {
     const [user, setUser] = useState();
@@ -46,6 +47,9 @@ function App() {
                 } />
                 <Route path="/dashboard" element= {
                     user ? <Dashboard/> : <Navigate to="/" />
+                } />
+                <Route path="/allTickets" element = {
+                    user ? <AllTickets/> : <Navigate to=";" />
                 } />
                 <Route path="/openStatusTickets" element= {
                     user ? <OpenStatusTickets/> : <Navigate to="/" />

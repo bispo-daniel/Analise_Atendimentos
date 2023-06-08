@@ -1,8 +1,11 @@
 import React from "react";
-import "./CreateTicket.css";
 import axios from "axios";
+import "./CreateTicket.css";
+
 import Header from "../../Components/Header/Header"
-let Message = require("../../Scripts/Message");
+
+import Message from "../../Scripts/Message";
+import LoadingSpinner from "../../Scripts/LoadingSpinner";
 
 function CreateTicket() {
     let executed = false;
@@ -11,7 +14,6 @@ function CreateTicket() {
         let responseMessage = '';
 
         if(!executed) {
-            
             await axios.post('https://analise-atendimentos-backend.onrender.com/createTicket', body)
                 .then(response => {
                     if (response.status === 200) {
@@ -28,6 +30,8 @@ function CreateTicket() {
     }
 
     const eventHandler = async () => {
+        LoadingSpinner();
+
         let ticketNumber = document.getElementById("ticketNumberInput").value;
         let radioChecked = document.querySelector('input[name="ticketType"]:checked');
         let clientName = document.getElementById("clientNameInput").value;
@@ -50,10 +54,12 @@ function CreateTicket() {
                 window.location = '/dashboard';
                 
             } else {
+                LoadingSpinner();
                 Message(createTicketMessage);
             }
 
         } else {
+            LoadingSpinner();
             Message("Ticket não pode ser criado");
         }
     }
@@ -77,10 +83,12 @@ function CreateTicket() {
                         <input className="form-check-input" type="radio" name="ticketType" id="inlineRadio1" value="Aberto" />
                         <label className="form-check-label" htmlFor="inlineRadio1">Aberto</label>
                     </div>
+
                     <div className="form-check form-check-inline">
                         <input className="form-check-input" type="radio" name="ticketType" id="inlineRadio2" value="Fechado" />
                         <label className="form-check-label" htmlFor="inlineRadio2">Fechado</label>
                     </div>
+
                     <div className="form-check form-check-inline">
                         <input className="form-check-input" type="radio" name="ticketType" id="inlineRadio3" value="Pendente" />
                         <label className="form-check-label" htmlFor="inlineRadio3">Pendente</label>
@@ -89,7 +97,12 @@ function CreateTicket() {
                 <input type="number" name="" id="ticketNumberInput" placeholder="Número do atendimento"/>
                 <input type="text" name="" id="clientNameInput" placeholder="Nome do cliente"/>
                 <input type="number" name="" id="telephoneInput" placeholder="Telefone"/>
-                <button className="btn btn-success m-3 w-50" onClick={e => eventHandler()}>Criar</button>
+
+                <div className="buttonSpinnerArea">
+                    <button className="btn btn-success m-3 w-50" onClick={e => eventHandler()}>Criar</button>
+
+                    <div className="spinner-border text-success" role="status" />
+                </div>
             </main>
         </>
     )

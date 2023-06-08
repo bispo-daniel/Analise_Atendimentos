@@ -34,7 +34,26 @@
     outline: 1px solid #888;
 }
 
-.loginMain > button {
+.loginMain > .buttonSpinnerArea {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginMain > .buttonSpinnerArea > .spinner-border {
+    visibility: hidden;
+    width: 40px !important;
+    height: 40px !important;
+
+    --bs-spinner-border-width: 0.15em !important;
+
+    margin-top: 25px;
+}
+
+.loginMain > .buttonSpinnerArea > button {
     width: 50%;
     height: 35px;
 
@@ -42,7 +61,7 @@
     border-radius: 5px;
 }
 
-.loginMain > button:hover {
+.loginMain > .buttonSpinnerArea > button:hover {
     background-color: #198754;
     color: whitesmoke;
     transition: 0.5s;

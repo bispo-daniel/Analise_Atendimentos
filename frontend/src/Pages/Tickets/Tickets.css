@@ -4,11 +4,15 @@
 
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-evenly;
+
+    margin-top: 80px;
 }
 
 @media screen and (max-width: 425px) {
     .ticketWrapper {
+        margin-top: 0px;
         margin-bottom: 80px;
     }
 }

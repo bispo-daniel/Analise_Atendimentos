@@ -5,9 +5,9 @@ function Ticket(props) {
     return (
         <main className="ticketMain">
             <h1>{props.ticketId} - {props.ticketStatus}</h1>
-            <p>Cliente: {props.contactName}</p>
-            <p>Telefone: {props.contactNumber}</p>
-            <br />
+            <p>Cliente: {props.clientName}</p>
+            <p>Telefone: {props.telephone}</p>
+            <hr />
             <p>Criado em:</p>
             <p>{props.createdAt}</p>
         </main>

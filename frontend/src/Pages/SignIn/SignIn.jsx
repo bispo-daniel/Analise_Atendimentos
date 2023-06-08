@@ -1,7 +1,9 @@
 import React from "react";
-import "./SignIn.css";
 import axios from 'axios';
-const Message = require("../../Scripts/Message");
+import "./SignIn.css";
+
+import Message from "../../Scripts/Message";
+import LoadingSpinner from "../../Scripts/LoadingSpinner";
 
 function SignIn() {
     let executed = false;
@@ -27,6 +29,8 @@ function SignIn() {
     }
 
     async function eventHandler() {
+        LoadingSpinner();
+
         let emailInput = document.getElementById('emailInput').value
         let usernameInput = document.getElementById('usernameInput').value
         let passwordInput = document.getElementById('passwordInput').value
@@ -43,6 +47,7 @@ function SignIn() {
             Message(signInMessage);
             window.location = '/';
         } else {
+            LoadingSpinner();
             Message(signInMessage);
         }
     }
@@ -63,7 +68,11 @@ function SignIn() {
             <input type="text" name="" id="usernameInput" placeholder="Nome de Usuário"/>
             <input type="text" name="" id="passwordInput" placeholder="Senha"/>
 
-            <button onClick={e => eventHandler()}>Criar</button>
+            <div className="buttonSpinnerArea">
+                <button onClick={e => eventHandler()}>Criar</button>
+
+                <div className="spinner-border text-success" role="status" />
+            </div>
         </main>
     )
 }

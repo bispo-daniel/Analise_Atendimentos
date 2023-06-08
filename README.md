@@ -1,5 +1,12 @@
 # Análise de atendimentos
 
+# V7 
+
+    Fixed header;
+    All tickets page;
+    Bootstrap spinner implementation;
+    Scripts exported with ES6 'export default' (Standardization);
+
 # V6 (Structure update)
 
     Client cannot create duplicate tickets or users;
@@ -10,8 +17,6 @@
 
     Jason Web Token implemented to check if the client trying to access any route is logged.
     Exit account button in the header.
-
-# Previous versions:
 
 # V4 (New colors, Header update, create and read tickets functionality)
 

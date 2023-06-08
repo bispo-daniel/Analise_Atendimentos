@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import "./Tickets.css"
-import axios from "axios";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import './Tickets.css'
 
-import Header from "../../Components/Header/Header";
-import Ticket from "../../Components/Ticket/Ticket";
-import { get } from "../../Scripts/getTicketsByStatusType"
+import Header from '../../Components/Header/Header';
+import Ticket from '../../Components/Ticket/Ticket';
+import getTickets from '../../Scripts/GetTicketsByType'
 
 function PendingStatusTickets() {
     const [tickets, setTickets] = useState();
@@ -16,18 +16,18 @@ function PendingStatusTickets() {
         })
     }, [])
 
-    let arrayOfArrays = get(tickets, "Pendente");
+    let arrayOfArrays = getTickets(tickets, 'Pendente');
 
     return (
         <>
             <Header/>
-            <main className="ticketWrapper">
+            <main className='ticketWrapper'>
                 {
-                    arrayOfArrays != null? arrayOfArrays.map((arr, index) => {
+                    arrayOfArrays != null ? arrayOfArrays.map((ticket, index) => {
                         return (
-                            <Ticket key={index} ticketId={arr[0]} ticketStatus="Pendente" contactName={arr[2]} contactNumber={arr[3]} createdAt={arr[4]}/>
+                            <Ticket key={index} ticketId={ticket[0]} ticketStatus='Pendente' clientName={ticket[2]} telephone={ticket[3]} createdAt={ticket[4]}/>
                         )
-                    }) : console.log("Array nulo...")
+                    }) : console.log('Array nulo...')
                 }
             </main>
         </>

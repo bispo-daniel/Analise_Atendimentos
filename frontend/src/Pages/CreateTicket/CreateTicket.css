@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: center;
 
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .createTicketMain > h1 {
@@ -35,4 +35,18 @@
 }
 .createTicketMain > input:focus {
     outline: 1px solid #888;
+}
+
+.createTicketMain > .buttonSpinnerArea > .spinner-border {
+    visibility: hidden;
+    width: 40px !important;
+    height: 40px !important;
+
+    --bs-spinner-border-width: 0.15em !important;
+}
+
+@media screen and (max-width: 425px) {
+    .createTicketMain {
+        margin-top: 40px;
+    }
 }

@@ -1,4 +1,4 @@
-let message = (messageSended) => {
+let Message = (messageSended) => {
     if(!document.getElementById('htmlMessage')) {
         let p = document.createElement('p');
 
@@ -15,4 +15,4 @@ let message = (messageSended) => {
     }
 }
 
-module.exports = message;
+export default Message;

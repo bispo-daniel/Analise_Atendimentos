@@ -1,6 +1,5 @@
 .card {
-    width: 25%;
-    height: 30% !important;
+    height: 80px !important;
 
     border-radius: 5px;
     background-color: #00000033 !important;

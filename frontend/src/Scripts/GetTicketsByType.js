@@ -1,4 +1,4 @@
-export function get(tickets, statusType) {
+function getTickets(tickets, statusType) {
     let arrayOfArrays = [];
 
     if(tickets) {
@@ -21,3 +21,5 @@ export function get(tickets, statusType) {
 
     return arrayOfArrays;
 }
+
+export default getTickets;

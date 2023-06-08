@@ -34,7 +34,26 @@
     outline: 1px solid #888;
 }
 
-.signInMain > button {
+.signInMain > .buttonSpinnerArea {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signInMain > .buttonSpinnerArea > .spinner-border {
+    visibility: hidden;
+    width: 40px !important;
+    height: 40px !important;
+
+    --bs-spinner-border-width: 0.15em !important;
+
+    margin-top: 25px;
+}
+
+.signInMain > .buttonSpinnerArea > button {
     width: 50%;
     height: 35px;
 
@@ -42,7 +61,7 @@
     border-radius: 5px;
 }
 
-.signInMain > button:hover {
+.signInMain > .buttonSpinnerArea > button:hover {
     background-color: #198754;
     color: whitesmoke;
     transition: 0.5s;
