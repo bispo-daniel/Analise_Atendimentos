@@ -1,10 +1,15 @@
-function LoadingSpinner() {
-    let buttonSpinnerArea = document.getElementsByClassName('spinner-border')[0];
+function LoadingSpinner(area) {
 
-    if (buttonSpinnerArea.style.visibility === "" || buttonSpinnerArea.style.visibility === "hidden") {
-        buttonSpinnerArea.style.visibility = 'visible'
+    let spinner = document.getElementsByClassName('spinner-border')[0];
+
+    if(spinner) {
+        area.removeChild(spinner)
+
     } else {
-        buttonSpinnerArea.style.visibility = 'hidden';
+        let div = document.createElement('div')
+        div.className = 'spinner-border text-success'
+    
+        area.appendChild(div);
     }
 }
 

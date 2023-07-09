@@ -29,7 +29,8 @@ function SignIn() {
     }
 
     async function eventHandler() {
-        LoadingSpinner();
+        let area = document.getElementsByClassName('buttonSpinnerArea')[0];
+        LoadingSpinner(area);
 
         let emailInput = document.getElementById('emailInput').value
         let usernameInput = document.getElementById('usernameInput').value
@@ -47,7 +48,7 @@ function SignIn() {
             Message(signInMessage);
             window.location = '/';
         } else {
-            LoadingSpinner();
+            LoadingSpinner(area);
             Message(signInMessage);
         }
     }
@@ -70,8 +71,6 @@ function SignIn() {
 
             <div className="buttonSpinnerArea">
                 <button onClick={e => eventHandler()}>Criar</button>
-
-                <div className="spinner-border text-success" role="status" />
             </div>
         </main>
     )

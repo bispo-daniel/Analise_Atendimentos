@@ -30,7 +30,9 @@ function CreateTicket() {
     }
 
     const eventHandler = async () => {
-        LoadingSpinner();
+        let area = document.getElementsByClassName('buttonSpinnerArea')[0]
+
+        LoadingSpinner(area);
 
         let ticketNumber = document.getElementById("ticketNumberInput").value;
         let radioChecked = document.querySelector('input[name="ticketType"]:checked');
@@ -54,12 +56,12 @@ function CreateTicket() {
                 window.location = '/dashboard';
                 
             } else {
-                LoadingSpinner();
+                LoadingSpinner(area);
                 Message(createTicketMessage);
             }
 
         } else {
-            LoadingSpinner();
+            LoadingSpinner(area);
             Message("Ticket não pode ser criado");
         }
     }
@@ -98,10 +100,8 @@ function CreateTicket() {
                 <input type="text" name="" id="clientNameInput" placeholder="Nome do cliente"/>
                 <input type="number" name="" id="telephoneInput" placeholder="Telefone"/>
 
-                <div className="buttonSpinnerArea">
-                    <button className="btn btn-success m-3 w-50" onClick={e => eventHandler()}>Criar</button>
-
-                    <div className="spinner-border text-success" role="status" />
+                <div className="buttonSpinnerArea w-50">
+                    <button className="btn btn-success my-3 w-100" onClick={e => eventHandler()}>Criar</button>
                 </div>
             </main>
         </>

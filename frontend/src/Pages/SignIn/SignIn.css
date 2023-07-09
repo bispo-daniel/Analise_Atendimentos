@@ -43,16 +43,6 @@
     justify-content: center;
 }
 
-.signInMain > .buttonSpinnerArea > .spinner-border {
-    visibility: hidden;
-    width: 40px !important;
-    height: 40px !important;
-
-    --bs-spinner-border-width: 0.15em !important;
-
-    margin-top: 25px;
-}
-
 .signInMain > .buttonSpinnerArea > button {
     width: 50%;
     height: 35px;

@@ -32,3 +32,12 @@ body {
     background-color: white;
     border-radius: 10px;
 }
+
+.spinner-border {
+    width: 40px !important;
+    height: 40px !important;
+
+    --bs-spinner-border-width: 0.15em !important;
+
+    margin: 20px 0px 10px 0px;
+}

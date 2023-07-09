@@ -26,7 +26,8 @@ function Login(){
     }
     
     async function eventHandler() {
-        LoadingSpinner();
+        let area = document.getElementsByClassName('buttonSpinnerArea')[0]
+        LoadingSpinner(area);
 
         let emailInput = document.getElementById('emailInput').value
         let passwordInput = document.getElementById('passwordInput').value
@@ -39,7 +40,7 @@ function Login(){
             Message(loginMessage);
             window.location.reload();
         } else {
-            LoadingSpinner();
+            LoadingSpinner(area);
             Message(loginMessage);
         }
     }
@@ -60,8 +61,6 @@ function Login(){
 
             <div className="buttonSpinnerArea">
                 <button onClick={e => eventHandler()} id="loginButton">Entrar</button>
-
-                <div className="spinner-border text-success" role="status" />
             </div>
             <p>Não tem uma conta? <a href="/signIn">Inscreva-se</a></p>
         </main>

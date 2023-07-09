@@ -37,14 +37,6 @@
     outline: 1px solid #888;
 }
 
-.createTicketMain > .buttonSpinnerArea > .spinner-border {
-    visibility: hidden;
-    width: 40px !important;
-    height: 40px !important;
-
-    --bs-spinner-border-width: 0.15em !important;
-}
-
 @media screen and (max-width: 425px) {
     .createTicketMain {
         margin-top: 40px;
